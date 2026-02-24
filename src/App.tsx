@@ -228,12 +228,22 @@ export default function App() {
                     <span className="text-accent font-bold uppercase tracking-widest">What it gives you:</span> Unparalleled market insights, automated risk assessment, and a glimpse into the future of autonomous capital management.
                   </p>
                 </div>
-                <button 
-                  onClick={() => setShowWelcome(false)}
-                  className="px-12 py-4 border-2 border-accent text-black bg-accent font-bold uppercase tracking-[0.2em] hover:bg-black hover:text-accent transition-all duration-300"
-                >
-                  Enter Protocol
-                </button>
+                <div className="flex gap-4">
+                  <button 
+                    onClick={() => setShowWelcome(false)}
+                    className="flex-1 px-8 py-4 border-2 border-accent text-black bg-accent font-bold uppercase tracking-[0.2em] hover:bg-black hover:text-accent transition-all duration-300"
+                  >
+                    Enter Protocol
+                  </button>
+                  <a 
+                    href="https://x.com/shellagents" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="px-6 py-4 border-2 border-accent text-accent bg-black font-bold uppercase tracking-[0.2em] hover:bg-accent hover:text-black transition-all duration-300 flex items-center justify-center"
+                  >
+                    <Twitter size={20} />
+                  </a>
+                </div>
               </div>
             </motion.div>
           </motion.div>
@@ -256,7 +266,7 @@ export default function App() {
         </div>
         <nav className="flex gap-8">
           <a href="#" className="text-[10px] uppercase tracking-widest font-bold hover:glow-accent transition-all">Documentation</a>
-          <a href="#" className="text-[10px] uppercase tracking-widest font-bold hover:glow-accent transition-all">X / Twitter</a>
+          <a href="https://x.com/shellagents" target="_blank" rel="noopener noreferrer" className="text-[10px] uppercase tracking-widest font-bold hover:glow-accent transition-all">X / Twitter</a>
           <a href="#" className="text-[10px] uppercase tracking-widest font-bold hover:glow-accent transition-all">Solana Explorer</a>
         </nav>
       </header>
