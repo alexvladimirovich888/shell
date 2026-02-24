@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --color-accent: #c3f323;
+}
+
+@layer base {
+  body {
+    @apply bg-black text-accent font-sans antialiased;
+  }
+}
+
+.grid-lines {
+  background-image: linear-gradient(to right, rgba(195, 243, 35, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(195, 243, 35, 0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.scan-line {
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #c3f323, transparent);
+  width: 100%;
+  position: absolute;
+  z-index: 20;
+  animation: scan 4s ease-in-out infinite;
+}
+
+@keyframes scan {
+  0% { top: 0%; opacity: 0; }
+  5% { opacity: 1; }
+  95% { opacity: 1; }
+  100% { top: 100%; opacity: 0; }
+}
+
+.glow-accent {
+  text-shadow: 0 0 10px rgba(195, 243, 35, 0.5);
+}
+
+.border-accent {
+  border-color: #c3f323;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: #000;
+}
+::-webkit-scrollbar-thumb {
+  background: #c3f323;
+}
